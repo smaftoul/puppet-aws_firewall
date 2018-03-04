@@ -9,3 +9,6 @@ fixtures:
     firewall:
       repo: 'puppetlabs/firewall'
       ref: '1.8.1'
+    ip:
+      repo: 'thrnio/ip'
+      ref: '1.0.0'
