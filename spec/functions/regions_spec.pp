@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'aws_firewall::region::all' do
+describe 'aws_firewall::regions' do
   regions = %w[
     GLOBAL
     ap-northeast-1
