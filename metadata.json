@@ -1,0 +1,48 @@
+{
+  "name": "pmuller-aws_firewall",
+  "version": "1.0.0",
+  "author": "Philippe Muller",
+  "summary": "Granular iptables rules for Amazon Web Services",
+  "license": "Apache-2.0",
+  "source": "https://github.com/pmuller/puppet-aws_firewall",
+  "project_page": "https://github.com/pmuller/puppet-aws_firewall",
+  "issues_url": "https://github.com/pmuller/puppet-aws_firewall/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.7.0 < 6.0.0"
+    }
+  ],
+  "pdk-version": "1.4.1",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
+  "template-ref": "1.4.1-0-g52adbbb"
+}
