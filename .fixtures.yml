@@ -3,9 +3,9 @@
 ---
 fixtures:
   forge_modules:
-     stdlib:
-       repo: 'puppetlabs/stdlib'
-       ref: '4.24.0'
+    stdlib:
+      repo: 'puppetlabs/stdlib'
+      ref: '4.24.0'
     firewall:
       repo: 'puppetlabs/firewall'
       ref: '1.8.1'
