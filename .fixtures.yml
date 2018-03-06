@@ -12,3 +12,6 @@ fixtures:
     ip:
       repo: 'thrnio/ip'
       ref: '1.0.0'
+    ipset:
+      repo: 'mighq/ipset'
+      ref: '0.5.2'
