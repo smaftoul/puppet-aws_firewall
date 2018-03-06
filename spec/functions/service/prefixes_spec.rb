@@ -12,7 +12,7 @@ describe 'aws_firewall::service::prefixes' do
 
     it do
       is_expected.to run.with_params(
-        %w[ap-northeast-3], %w[S3 EC2], '4'
+        %w[ap-northeast-3], %w[S3 EC2], 4
       ).and_return(result)
     end
   end
@@ -28,14 +28,14 @@ describe 'aws_firewall::service::prefixes' do
 
     it do
       is_expected.to run.with_params(
-        %w[GLOBAL ap-northeast-1], %w[CLOUDFRONT EC2], '6'
+        %w[GLOBAL ap-northeast-1], %w[CLOUDFRONT EC2], 6
       ).and_return(result)
     end
   end
 
   describe 'no result' do
     it do
-      is_expected.to run.with_params(%w[GLOBAL], %w[AMAZON], '6').and_return([])
+      is_expected.to run.with_params(%w[GLOBAL], %w[AMAZON], 6).and_return([])
     end
   end
 end
