@@ -3,7 +3,7 @@
 function aws_firewall::service::prefixes(
   AWS_Firewall::Regions $regions,
   AWS_Firewall::Services $services,
-  AWS_Firewall::IP_Version $ip_version,
+  AWS_Firewall::IP_Version $ip_version = 4,
 ) >> Variant[Array[IP::Address::V4::CIDR], Array[IP::Address::V6]] {
   delete_undef_values(
     unique(

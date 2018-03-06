@@ -11,7 +11,7 @@
 define aws_firewall::ipset(
   AWS_Firewall::Regions $regions,
   AWS_Firewall::Services $services,
-  AWS_Firewall::IP_Version $ip_version,
+  AWS_Firewall::IP_Version $ip_version = 4,
   Enum['present', 'absent'] $ensure = 'present',
 ) {
   ipset { $title:

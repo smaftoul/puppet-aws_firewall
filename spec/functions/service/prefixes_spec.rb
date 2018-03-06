@@ -1,7 +1,10 @@
 require 'spec_helper'
 
 describe 'aws_firewall::service::prefixes' do
-  describe 'ipv4' do
+  [
+    ['implicit', [%w[ap-northeast-3], %w[S3 EC2]]],
+    ['explicit', [%w[ap-northeast-3], %w[S3 EC2], 4]],
+  ].each do |type, arguments|
     result = %w[
       13.208.0.0/16
       52.94.249.96/28
@@ -10,14 +13,12 @@ describe 'aws_firewall::service::prefixes' do
       52.95.158.0/23
     ]
 
-    it do
-      is_expected.to run.with_params(
-        %w[ap-northeast-3], %w[S3 EC2], 4
-      ).and_return(result)
+    context "ipv4 - #{type}" do
+      it { is_expected.to run.with_params(*arguments).and_return(result) }
     end
   end
 
-  describe 'ipv6' do
+  context 'ipv6' do
     result = %w[
       2600:9000::/28
       2400:6700:ff00::/64
