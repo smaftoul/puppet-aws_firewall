@@ -16,6 +16,7 @@ describe 'aws_firewall::ipset' do
         operatingsystemmajrelease: '7',
       }
     end
+
     it do
       is_expected.to contain_ipset('ap-south-1-s3').only_with(
         ensure: 'present',
