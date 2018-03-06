@@ -123,4 +123,7 @@ extra_gemfiles.each do |gemfile|
     eval(File.read(gemfile), binding)
   end
 end
+
+gem 'coveralls', require: false
+
 # vim: syntax=ruby
