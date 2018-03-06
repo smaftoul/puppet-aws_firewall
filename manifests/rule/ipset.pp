@@ -38,7 +38,11 @@
 #     }
 #
 define aws_firewall::rule::ipset(
-  Variant[AWS_Firewall::IPSet::Name, AWS_Firewall::IPSet::Data, Type[Resource['aws_firewall::ipset']]] $ipset,
+  Variant[
+    AWS_Firewall::IPSet::Name,
+    AWS_Firewall::IPSet::Data,
+    Type[Resource['aws_firewall::ipset']]
+  ] $ipset,
   Enum['OUTPUT', 'FORWARD'] $chain,
   Optional[IP::Address::V4] $source = undef,
   Optional[AWS_Firewall::Auth::NameOrID] $uid = undef,
