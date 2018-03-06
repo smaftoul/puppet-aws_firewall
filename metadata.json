@@ -22,7 +22,7 @@
     },
     {
       "name": "mighq/ipset",
-      "version_requirement": ">=0.5.2"
+      "version_requirement": "=0.5.2"
     }
   ],
   "operatingsystem_support": [
