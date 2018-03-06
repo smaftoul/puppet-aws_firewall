@@ -8,8 +8,8 @@
 #   }
 #
 define aws_firewall::rule::metadata (
-  Optional[Variant[Integer, String]] $uid = undef,
-  Optional[Variant[Integer, String]] $gid = undef,
+  Optional[AWS_Firewall::Auth::NameOrID] $uid = undef,
+  Optional[AWS_Firewall::Auth::NameOrID] $gid = undef,
   Enum['accept', 'drop'] $action = 'accept',
 ) {
   firewall { $title:
