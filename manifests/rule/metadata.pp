@@ -1,4 +1,4 @@
-# aws_firewall::firewall::metadata
+# aws_firewall::rule::metadata
 #
 # Create an OUTPUT firewall rule allowing access to AWS instance metadata.
 #
