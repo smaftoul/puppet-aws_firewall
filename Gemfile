@@ -123,4 +123,8 @@ extra_gemfiles.each do |gemfile|
     eval(File.read(gemfile), binding)
   end
 end
+
+gem 'coveralls', require: false
+gem 'puppet-strings'
+
 # vim: syntax=ruby

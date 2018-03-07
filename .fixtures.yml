@@ -3,4 +3,15 @@
 ---
 fixtures:
   forge_modules:
-#     stdlib: "puppetlabs/stdlib"
+    stdlib:
+      repo: 'puppetlabs/stdlib'
+      ref: '4.24.0'
+    firewall:
+      repo: 'puppetlabs/firewall'
+      ref: '1.8.1'
+    ip:
+      repo: 'thrnio/ip'
+      ref: '1.0.0'
+    ipset:
+      repo: 'mighq/ipset'
+      ref: '0.5.2'

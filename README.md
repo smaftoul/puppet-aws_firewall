@@ -3,14 +3,11 @@
 #### Table of Contents
 
 1. [Description](#description)
-2. [Setup - The basics of getting started with aws_firewall](#setup)
-    * [What aws_firewall affects](#what-aws_firewall-affects)
-    * [Setup requirements](#setup-requirements)
-    * [Beginning with aws_firewall](#beginning-with-aws_firewall)
-3. [Usage - Configuration options and additional functionality](#usage)
-4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Development - Guide for contributing to the module](#development)
+2. [Usage - Configuration options and additional functionality](#usage)
+3. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+4. [Limitations - OS compatibility, etc.](#limitations)
+5. [Development - Guide for contributing to the module](#development)
+6. [Changelog](#changelog)
 
 ## Description
 
@@ -18,16 +15,43 @@ This module generates granular iptables rules to restrict access to Amazon Web S
 
 ## Usage
 
-TODO
+### Create an ipset that contains specific AWS IP prefixes
+
+```puppet
+aws_firewall::ipset { 'ap-south-1-s3':
+  regions  => ['ap-south-1'],
+  services => ['S3'],
+}
+```
+
+### Create an ipset-based iptables rule
+
+```puppet
+aws_firewall::rule::ipset { '200 Allow access to S3 in us-east-1':
+  ipset => 'ap-south-1-s3',
+}
+```
+
+### Create an iptables rule to allow access to EC2 metadata
+```puppet
+aws_firewall::rule::metadata { '200 Allow access to EC2 instance metadata':
+  uid => 'someone',
+}
+```
 
 ## Reference
 
-TODO
+See [reference](doc/reference.md)
 
 ## Limitations
 
-TODO
+* Only tested on RedHat-like Linux distributions
+* IPv6 prefixes are not yet supported
 
 ## Development
 
-TODO
+See [development](doc/development.md)
+
+## Changelog
+
+See [CHANGELOG](CHANGELOG.md)
