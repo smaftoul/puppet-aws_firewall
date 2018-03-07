@@ -1,5 +1,9 @@
 # Changelog
 
+## Release 0.1.5
+
+* Try automated push to Puppet Forge with ``git push master --tags``
+
 ## Release 0.1.4
 
 * Try automated push to Puppet Forge after removing branch restrictions
