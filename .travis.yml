@@ -35,6 +35,11 @@ branches:
   only:
     - master
     - develop
+    - /^feature/.*$/
+    - /^bugfix/.*$/
+    - /^release/.*$/
+    - /^hotfix/.*$/
+    - /^support/.*$/
 notifications:
   email: false
 deploy:
