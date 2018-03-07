@@ -14,7 +14,7 @@ This module generates granular iptables rules to restrict access to Amazon Web S
 
 ## Usage
 
-### ipset
+### Create an ipset that contains specific AWS IP prefixes
 
 ```puppet
 aws_firewall::ipset { 'ap-south-1-s3':
