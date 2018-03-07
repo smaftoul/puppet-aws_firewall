@@ -31,6 +31,8 @@ matrix:
     -
       env: PUPPET_GEM_VERSION="~> 4.0" CHECK=spec
       rvm: 2.1.9
+    -
+      env: CHECK=build DEPLOY_TO_FORGE=yes
 branches:
   only:
     - master
@@ -44,10 +46,9 @@ notifications:
   email: false
 deploy:
   provider: puppetforge
-  user: puppet
+  user: pmuller
   password:
-    secure: ""
+    secure: "s97+z4R9/94muWibIloW1zPYkdZqFFkrgzpC1rh6Ew12t93mvCRWeuaSo+X2eBCqOWcf8q9HkBx8LmSLazuAgCTITM3Ht8lY8TIENqhSK2DgVVmmaEv/m0j710P9fnNZ0eCD+VvBZ8Vm3aqMDJ5fuvbZFfHMkoBBsGBHTvh5h9bnBW1IPDb08qWBwSzspVRLBG06cJcb24Kcs+0WyVyJbnKiChZ0hCqO5uc8IzrtVYTAUaoJ2yydoJSzdeH7t7fwxM8gJzpYXXyCVvoa7ft3lLTSXkPIALn/Sg0ytJMVrrk7CM0KQpjuNvNeROFlDcFHOp2mAg44JzsIcEkBuS1X7c3tE70WpJ2/HX2vw5GOVm4LYioLvLLWVnbECRApqqwaLL19lKWBafTOAD6Kf3fG9EyhQqVu4IZgn+gL7H61yh3xPfBGCxbsvSojLjjGo1iLchVUEX/LPnnBUF/gNm7+5FgfPJ4OtiRaBKCrQupCSzsQskci9bA1aCzBHIdiyjFMdSqJ3U/oc+/Y4ZaJWU3c7vEoHpVJepKmnBXwWH4FfXo+N6mJ6M5W9hB3uWwYth3/wZ3WvtNVNSVhR9aIuYnlmEsQ+n+qlxhvXE5h53hH9o4dFKzHhpjJ58Jznuw66RgjPXmnKPobNWc5wiuoX2ABbrUy8qw8Kh3fBk97AMrRDeg="
   on:
     tags: true
-    all_branches: true
     condition: "$DEPLOY_TO_FORGE = yes"
