@@ -33,15 +33,6 @@ matrix:
       rvm: 2.1.9
     -
       env: CHECK=build DEPLOY_TO_FORGE=yes
-branches:
-  only:
-    - master
-    - develop
-    - /^feature/.*$/
-    - /^bugfix/.*$/
-    - /^release/.*$/
-    - /^hotfix/.*$/
-    - /^support/.*$/
 notifications:
   email: false
 deploy:
