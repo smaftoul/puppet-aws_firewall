@@ -1,5 +1,9 @@
 # Changelog
 
+## Release 0.1.6
+
+* Fix documentation URLs in README
+
 ## Release 0.1.5
 
 * Try automated push to Puppet Forge with ``git push master --tags``

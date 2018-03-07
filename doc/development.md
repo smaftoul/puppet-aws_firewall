@@ -57,3 +57,16 @@ contributing to this project.
    git flow feature publish
    ```
 7. Create a pull request toward the ``develop`` branch
+
+## Release
+
+1. Start a new release
+   ```bash
+   git flow release start MAJOR.MINOR
+   ```
+2. Bump version in ``metadata.json`` and commit
+3. Update ``CHANGELOG.md`` and commit
+4. Finish the release
+   ```bash
+   git flow release finish MAJOR.MINOR -m MAJOR.MINOR.PATCH -T MAJOR.MINOR.PATCH -p
+   ```

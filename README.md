@@ -41,7 +41,7 @@ aws_firewall::rule::metadata { '200 Allow access to EC2 instance metadata':
 
 ## Reference
 
-See [reference](doc/reference.md)
+See [reference](https://github.com/pmuller/puppet-aws_firewall/blob/master/doc/reference.md)
 
 ## Limitations
 
@@ -50,8 +50,8 @@ See [reference](doc/reference.md)
 
 ## Development
 
-See [development](doc/development.md)
+See [development](https://github.com/pmuller/puppet-aws_firewall/blob/master/doc/development.md)
 
 ## Changelog
 
-See [CHANGELOG](CHANGELOG.md)
+See [CHANGELOG](https://github.com/pmuller/puppet-aws_firewall/blob/master/CHANGELOG.md)

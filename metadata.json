@@ -1,6 +1,6 @@
 {
   "name": "pmuller-aws_firewall",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "Philippe Muller",
   "summary": "Granular iptables rules for Amazon Web Services",
   "license": "Apache-2.0",
