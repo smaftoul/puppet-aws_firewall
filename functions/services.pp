@@ -1,5 +1,7 @@
-# Get an array of all AWS services
-
+# Get an array of all AWS services.
+#
+# @return [AWS_Firewall::Services] All available AWS services
+#
 function aws_firewall::services() >> AWS_Firewall::Services {
   unique(
     flatten(
