@@ -1,5 +1,9 @@
 # Changelog
 
+## Release 0.1.2
+
+* Try to push tags first to trigger automatic deployment on Puppet Forge
+
 ## Release 0.1.1
 
 * Enable automatic deployment of new releases on Puppet Forge
