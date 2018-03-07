@@ -1,5 +1,9 @@
 # Changelog
 
+## Release 0.1.3
+
+* Try automated push to Puppet Forge with "all_branches: true"
+
 ## Release 0.1.2
 
 * Try to push tags first to trigger automatic deployment on Puppet Forge
