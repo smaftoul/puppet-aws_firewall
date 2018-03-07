@@ -7,6 +7,7 @@
 3. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 4. [Limitations - OS compatibility, etc.](#limitations)
 5. [Development - Guide for contributing to the module](#development)
+6. [Changelog](#changelog)
 
 ## Description
 
@@ -50,3 +51,7 @@ See [reference](doc/reference.md)
 ## Development
 
 See [development](doc/development.md)
+
+## Changelog
+
+See [CHANGELOG](CHANGELOG.md)
