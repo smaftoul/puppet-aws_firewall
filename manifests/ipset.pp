@@ -1,6 +1,9 @@
-# aws_firewall::ipset
-#
 # Create an IP set containing selected AWS IP networks.
+#
+# @param regions AWS regions matched by the ipset
+# @param services AWS services matched by the ipset
+# @param ip_version AWS prefixes matched by the ipset (IPv4 or IPv6)
+# @param ensure Determine whether the ipset must be created or deleted
 #
 # @example
 #   aws_firewall::ipset { 'ap-south-1-s3':

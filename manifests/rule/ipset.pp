@@ -1,41 +1,41 @@
-# aws_firewall::rule::ipset
-#
 # Create an ipset-based rule allowing access to selected AWS services.
 #
-# @example
+# @param ipset The ipset used by the firewall rule
+# @param chain The iptables chain in which the rule will be created
+# @param source The source host or network
+# @param uid The UID or username
+# @param gid The GID or group
+# @param action The rule accept
 #
-#   Explicit creation of the IP set:
+# @example Explicit creation of the IP set:
+#   aws_firewall::ipset { 'us-east-1-s3':
+#     regions  => ['us-east-1'],
+#     services => ['S3'],
+#   }
+#   aws_firewall::rule::ipset { '200 Allow access to S3 in us-east-1':
+#     ipset => 'us-east-1-s3',
+#   }
 #
-#     aws_firewall::ipset { 'us-east-1-s3':
-#       regions  => ['us-east-1'],
-#       services => ['S3'],
-#     }
-#     aws_firewall::rule::ipset { '200 Allow access to S3 in us-east-1':
-#       ipset => 'us-east-1-s3',
-#     }
-#
-#   Implicit creation of the IP set:
-#
-#     aws_firewall::rule::ipset { '200 Allow access to S3 in us-east-1':
-#       ipset => {
-#         'us-east-1-s3' => {
-#           regions  => ['us-east-1'],
-#           services => ['S3'],
-#         },
+# @example Implicit creation of the IP set:
+#   aws_firewall::rule::ipset { '200 Allow access to S3 in us-east-1':
+#     ipset => {
+#       'us-east-1-s3' => {
+#         regions  => ['us-east-1'],
+#         services => ['S3'],
 #       },
-#     }
+#     },
+#   }
 #
-#   Passing an AWS ipset as resource reference:
-#
-#     $ipset = aws_firewall::ipset { 'us-east-1-s3':
-#       regions  => ['us-east-1'],
-#       services => ['S3'],
-#     }
-#     aws_firewall::rule::ipset { '200 Allow access to S3 in us-east-1':
-#       ipset  => $ipset,
-#       chain  => 'FORWARD',
-#       source => '10.0.0.0/8',
-#     }
+# @example Passing an AWS ipset as resource reference:
+#   $ipset = aws_firewall::ipset { 'us-east-1-s3':
+#     regions  => ['us-east-1'],
+#     services => ['S3'],
+#   }
+#   aws_firewall::rule::ipset { '200 Allow access to S3 in us-east-1':
+#     ipset  => $ipset,
+#     chain  => 'FORWARD',
+#     source => '10.0.0.0/8',
+#   }
 #
 define aws_firewall::rule::ipset(
   Variant[
