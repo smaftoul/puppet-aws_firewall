@@ -1,5 +1,9 @@
 # Changelog
 
+## Release 0.1.4
+
+* Try automated push to Puppet Forge after removing branch restrictions
+
 ## Release 0.1.3
 
 * Try automated push to Puppet Forge with "all_branches: true"
