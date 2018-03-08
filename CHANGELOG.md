@@ -1,5 +1,9 @@
 # Changelog
 
+## Release 0.1.7
+
+* Support Puppet starting at version 4.10
+
 ## Release 0.1.6
 
 * Fix documentation URLs in README
