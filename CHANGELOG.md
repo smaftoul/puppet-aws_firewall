@@ -1,5 +1,10 @@
 # Changelog
 
+## Release 0.1.9
+
+* Fix Puppet Forge deployment
+  (see https://github.com/travis-ci/dpl/issues/772)
+
 ## Release 0.1.8
 
 * Remove support for passing ipset as a resource reference in
