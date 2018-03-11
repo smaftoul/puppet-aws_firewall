@@ -124,7 +124,6 @@ extra_gemfiles.each do |gemfile|
   end
 end
 
-gem 'coveralls', require: false
 gem 'puppet-strings'
 
 # vim: syntax=ruby
