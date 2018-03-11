@@ -87,19 +87,6 @@ aws_firewall::rule::ipset { '200 Allow access to S3 in us-east-1':
 }
 ```
 
-##### Passing an AWS ipset as resource reference:
-```puppet
-$ipset = aws_firewall::ipset { 'us-east-1-s3':
-  regions  => ['us-east-1'],
-  services => ['S3'],
-}
-aws_firewall::rule::ipset { '200 Allow access to S3 in us-east-1':
-  ipset  => $ipset,
-  chain  => 'FORWARD',
-  source => '10.0.0.0/8',
-}
-```
-
 
 #### Parameters
 
@@ -107,11 +94,7 @@ The following parameters are available in the `aws_firewall::rule::ipset` define
 
 ##### `ipset`
 
-Data type: `Variant[
-    AWS_Firewall::IPSet::Name,
-    AWS_Firewall::IPSet::Data,
-    Type[Resource['aws_firewall::ipset']]
-  ]`
+Data type: `Variant[AWS_Firewall::IPSet::Name, AWS_Firewall::IPSet::Data]`
 
 The ipset used by the firewall rule
 

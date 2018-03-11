@@ -26,23 +26,8 @@
 #     },
 #   }
 #
-# @example Passing an AWS ipset as resource reference:
-#   $ipset = aws_firewall::ipset { 'us-east-1-s3':
-#     regions  => ['us-east-1'],
-#     services => ['S3'],
-#   }
-#   aws_firewall::rule::ipset { '200 Allow access to S3 in us-east-1':
-#     ipset  => $ipset,
-#     chain  => 'FORWARD',
-#     source => '10.0.0.0/8',
-#   }
-#
 define aws_firewall::rule::ipset(
-  Variant[
-    AWS_Firewall::IPSet::Name,
-    AWS_Firewall::IPSet::Data,
-    Type[Resource['aws_firewall::ipset']]
-  ] $ipset,
+  Variant[AWS_Firewall::IPSet::Name, AWS_Firewall::IPSet::Data] $ipset,
   Enum['OUTPUT', 'FORWARD'] $chain,
   Optional[IP::Address::V4] $source = undef,
   Optional[AWS_Firewall::Auth::NameOrID] $uid = undef,
@@ -59,9 +44,6 @@ define aws_firewall::rule::ipset(
     }
     AWS_Firewall::IPSet::Name: {
       $ipset_name = $ipset
-    }
-    Type[Resource['aws_firewall::ipset']]: {
-      $ipset_name = getparam($ipset, 'title')
     }
   }
   # lint:endignore
