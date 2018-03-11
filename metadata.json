@@ -1,12 +1,13 @@
 {
   "name": "pmuller-aws_firewall",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "author": "Philippe Muller",
   "summary": "Granular iptables rules for Amazon Web Services",
   "license": "Apache-2.0",
   "source": "https://github.com/pmuller/puppet-aws_firewall",
   "project_page": "https://github.com/pmuller/puppet-aws_firewall",
   "issues_url": "https://github.com/pmuller/puppet-aws_firewall/issues",
+  "tags": ["aws", "firewall", "iptables", "ec2", "s3"],
   "dependencies": [
     {
       "name": "puppetlabs/firewall",
