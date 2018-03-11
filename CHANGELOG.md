@@ -1,5 +1,10 @@
 # Changelog
 
+## Release 0.1.8
+
+* Remove support for passing ipset as a resource reference in
+  ``aws_firewall::rule::ipset``
+
 ## Release 0.1.7
 
 * Support Puppet starting at version 4.10
