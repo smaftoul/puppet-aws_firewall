@@ -1,5 +1,9 @@
 # aws_firewall
 
+[![Puppet Forge](http://img.shields.io/puppetforge/v/pmuller/aws_firewall.svg)](https://forge.puppetlabs.com/pmuller/aws_firewall)
+[![Puppet Forge downloads](https://img.shields.io/puppetforge/dt/pmuller/aws_firewall.svg)](https://forge.puppetlabs.com/pmuller/aws_firewall)
+[![Build Status](https://travis-ci.org/pmuller/puppet-aws_firewall.png)](https://travis-ci.org/pmuller/puppet-aws_firewall)
+
 #### Table of Contents
 
 1. [Description](#description)
