@@ -1,14 +1,5 @@
 require 'puppetlabs_spec_helper/module_spec_helper'
 require 'rspec-puppet-facts'
-require 'simplecov'
-require 'coveralls'
-
-# Enable coveralls
-SimpleCov.profiles.define 'rspec-puppet' do
-  add_filter '/fixtures/'
-  add_filter '/spec/'
-end
-Coveralls.wear! 'rspec-puppet'
 
 begin
   require 'spec_helper_local' if File.file?(File.join(File.dirname(__FILE__), 'spec_helper_local.rb'))

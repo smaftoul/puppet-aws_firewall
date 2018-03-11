@@ -53,14 +53,6 @@ describe 'aws_firewall::rule::ipset' do
     it { is_expected.to contain_firewall(title).only_with(firewall_attributes) }
   end
 
-  context 'reference of ipset by resource' do
-    let(:params) do
-      base_params.merge(ipset: ref('Aws_firewall::Ipset', 's3-europe'))
-    end
-
-    it { is_expected.to contain_firewall(title).only_with(firewall_attributes) }
-  end
-
   context 'implicit creation of ipset' do
     let(:pre_condition) {}
     let :params do
