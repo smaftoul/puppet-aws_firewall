@@ -32,12 +32,6 @@ describe 'aws_firewall::rule::ipset' do
     require: 'Aws_firewall::Ipset[s3-europe]',
   }
   let(:title) { title }
-  let :facts do
-    {
-      osfamily: 'RedHat',
-      operatingsystemmajrelease: '7',
-    }
-  end
   let(:pre_condition) do
     <<-EOS
       aws_firewall::ipset { 's3-europe':
@@ -67,6 +61,12 @@ describe 'aws_firewall::rule::ipset' do
     end
 
     it do
+      is_expected.to contain_aws_firewall__ipset('s3-europe').only_with(
+        ensure: 'present',
+        ip_version: 4,
+        regions: ['eu-west-1'],
+        services: ['S3'],
+      )
       is_expected.to contain_ipset('s3-europe').only_with(ipset_attributes)
       is_expected.to contain_firewall(title).only_with(firewall_attributes)
     end

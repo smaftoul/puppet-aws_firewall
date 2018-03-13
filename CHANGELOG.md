@@ -1,5 +1,11 @@
 # Changelog
 
+## Release 0.2.0
+
+* Depend on [pmuller/ipset](https://forge.puppet.com/pmuller/ipset) >= 0.6.0
+* Use modern facts
+* 100% test coverage
+
 ## Release 0.1.10
 
 * Add tags to package metadata
