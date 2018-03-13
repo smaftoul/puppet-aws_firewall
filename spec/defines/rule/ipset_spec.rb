@@ -61,6 +61,12 @@ describe 'aws_firewall::rule::ipset' do
     end
 
     it do
+      is_expected.to contain_aws_firewall__ipset('s3-europe').only_with(
+        ensure: 'present',
+        ip_version: 4,
+        regions: ['eu-west-1'],
+        services: ['S3'],
+      )
       is_expected.to contain_ipset('s3-europe').only_with(ipset_attributes)
       is_expected.to contain_firewall(title).only_with(firewall_attributes)
     end
