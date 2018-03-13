@@ -13,12 +13,6 @@ describe 'aws_firewall::ipset' do
     context "RedHat 7 - ipv4 #{type}" do
       let(:title) { 'ap-south-1-s3' }
       let(:params) { params.merge(extra_params) }
-      let :facts do
-        {
-          osfamily: 'RedHat',
-          operatingsystemmajrelease: '7',
-        }
-      end
 
       it do
         is_expected.to contain_ipset('ap-south-1-s3').only_with(
