@@ -1,5 +1,9 @@
 # Changelog
 
+## Release 0.3.0 - 2019-08-26
+
+* Update IP prefixes using ip-ranges.json "2019-08-22-23-13-05"
+
 ## Release 0.2.0
 
 * Depend on [pmuller/ipset](https://forge.puppet.com/pmuller/ipset) >= 0.6.0
