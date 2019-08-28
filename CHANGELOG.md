@@ -1,5 +1,9 @@
 # Changelog
 
+## Release 0.4.1 - 2019-08-28
+
+* Update dpl to fix automated deployment of new releases to Puppet Forge
+
 ## Release 0.4.0 - 2019-08-28
 
 * Update tests following data update
