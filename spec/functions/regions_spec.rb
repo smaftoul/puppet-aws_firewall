@@ -3,6 +3,8 @@ require 'spec_helper'
 describe 'aws_firewall::regions' do
   regions = %w[
     GLOBAL
+    af-south-1
+    ap-east-1
     ap-northeast-1
     ap-northeast-2
     ap-northeast-3
@@ -17,6 +19,7 @@ describe 'aws_firewall::regions' do
     eu-west-1
     eu-west-2
     eu-west-3
+    me-south-1
     sa-east-1
     us-east-1
     us-east-2
