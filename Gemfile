@@ -35,4 +35,4 @@ end
 
 gem 'facter', ENV['FACTER_GEM_VERSION']
 gem 'hiera', ENV['HIERA_GEM_VERSION']
-gem 'puppet', ENV['PUPPET_GEM_VERSION']
+gem 'puppet', ENV['PUPPET_GEM_VERSION'] || '5.5.16'
