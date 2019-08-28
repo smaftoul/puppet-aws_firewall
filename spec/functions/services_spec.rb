@@ -4,11 +4,17 @@ describe 'aws_firewall::services' do
   services = %w[
     AMAZON
     CLOUDFRONT
-    ROUTE53
-    CODEBUILD
     EC2
+    GLOBALACCELERATOR
+    ROUTE53
     ROUTE53_HEALTHCHECKS
+    DYNAMODB
     S3
+    AMAZON_CONNECT
+    CLOUD9
+    CODEBUILD
+    EC2_INSTANCE_CONNECT
+    WORKSPACES_GATEWAYS
   ]
 
   it do

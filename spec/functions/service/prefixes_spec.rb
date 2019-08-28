@@ -9,6 +9,7 @@ describe 'aws_firewall::service::prefixes' do
       13.208.0.0/16
       52.94.249.96/28
       52.95.225.0/24
+      99.77.140.0/24
       52.95.157.0/24
       52.95.158.0/23
     ]
@@ -20,7 +21,14 @@ describe 'aws_firewall::service::prefixes' do
 
   context 'ipv6' do
     result = %w[
-      2600:9000::/28
+      2600:9000:ddd::/48
+      2600:9000:eee::/48
+      2600:9000:fff::/48
+      2600:9000:1000::/36
+      2600:9000:2000::/35
+      2600:9000:4000::/36
+      2600:9000:5300::/40
+      2600:9000:f000::/36
       2400:6700:ff00::/64
       2406:da00:4000::/40
       2406:da14::/36
@@ -36,7 +44,7 @@ describe 'aws_firewall::service::prefixes' do
 
   describe 'no result' do
     it do
-      is_expected.to run.with_params(%w[GLOBAL], %w[AMAZON], 6).and_return([])
+      is_expected.to run.with_params(%w[GLOBAL], %w[EC2], 6).and_return([])
     end
   end
 end
