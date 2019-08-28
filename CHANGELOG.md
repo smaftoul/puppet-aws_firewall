@@ -1,5 +1,9 @@
 # Changelog
 
+## Release 0.4.0 - 2019-08-28
+
+* Update tests following data update
+
 ## Release 0.3.0 - 2019-08-26
 
 * Update IP prefixes using ip-ranges.json "2019-08-22-23-13-05"
