@@ -1,5 +1,9 @@
 # Changelog
 
+## Release 0.5.0 - 2020-01-30
+
+* Accept puppetlabs/firewall module < 3.0.0
+
 ## Release 0.4.1 - 2019-08-28
 
 * Update dpl to fix automated deployment of new releases to Puppet Forge
