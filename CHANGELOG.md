@@ -1,5 +1,9 @@
 # Changelog
 
+## Release 0.5.1 - 2020-11-12
+
+* Update IP prefixes using ip-ranges.json "2020-11-11-21-11-10"
+
 ## Release 0.5.0 - 2020-01-30
 
 * Accept puppetlabs/firewall module < 3.0.0
